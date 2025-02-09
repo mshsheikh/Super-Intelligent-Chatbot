@@ -14,3 +14,6 @@ Install the required packages using pip:
 
 ```bash
 pip install transformers torch
+
+## Note:
+On the first run, the DialoGPT-large model (~1.5GB of data) will be downloaded automatically. Ensure you have a stable internet connection.
