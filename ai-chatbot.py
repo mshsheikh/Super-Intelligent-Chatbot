@@ -22,7 +22,7 @@ while True:
     # Append the new user input tokens to the chat history (if it exists)
     bot_input_ids = new_input_ids if chat_history_ids is None else torch.cat([chat_history_ids, new_input_ids], dim=-1)
 
-    # Generate a response while keeping the context (on demand max_length)
+    # Response with your context (on demand max_length)
     chat_history_ids = model.generate(bot_input_ids, max_length=1000, pad_token_id=tokenizer.eos_token_id)
 
     # Generated tokens decode in string, no special tokens
